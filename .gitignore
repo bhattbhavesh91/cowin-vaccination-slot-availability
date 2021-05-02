@@ -2,6 +2,7 @@ MANIFEST
 build
 dist
 _build
+env
 docs/man/*.gz
 docs/source/api/generated
 docs/source/config.rst

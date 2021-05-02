@@ -3,11 +3,26 @@
 # and
 # https://github.com/MaartenGr/streamlit_guide/blob/master/setup.sh
 
+# mkdir -p ~/.streamlit/
+
+# echo "\
+# [server]\n\
+# headless = true\n\
+# enableCORS=false\n\
+# port = $PORT\n\
+# " > ~/.streamlit/config.toml
+
+# Setup.sh
 mkdir -p ~/.streamlit/
+
+echo "\
+[general]\n\
+email = \"bhattbhavesh91@gmail.com\"\n\
+" >~/.streamlit/credentials.toml
 
 echo "\
 [server]\n\
 headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
-" > ~/.streamlit/config.toml
+" >~/.streamlit/config.toml

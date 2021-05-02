@@ -1,3 +1,5 @@
 streamlit
 numpy
 pandas
+json
+requests

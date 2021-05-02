@@ -41,11 +41,9 @@ st.title('CoWIN Vaccination Slot Availability')
 unique_districts = list(mapping_df["district name"].unique())
 unique_districts.sort()
 
-
 left_column_1, right_column_1 = st.beta_columns(2)
 with left_column_1:
     numdays = st.slider('Select Date Range', 0, 100, 5)
-
 
 with right_column_1:
     dist_inp = st.selectbox('Select District', unique_districts)
@@ -82,12 +80,24 @@ if len(final_df):
     final_df.drop_duplicates(inplace=True)
     final_df.rename(columns=rename_mapping, inplace=True)
 
-    left_column_2, right_column_2 = st.beta_columns(2)
+    left_column_2, center_column_2, right_column_2 = st.beta_columns(3)
     with left_column_2:
         valid_pincodes = list(np.unique(final_df["Pincode"].values))
         pincode_inp = st.selectbox('Select Pincode', [""] + valid_pincodes)
         if pincode_inp != "":
             final_df = filter_column(final_df, "Pincode", pincode_inp)
+
+    with center_column_2:
+        valid_age = [18, 45]
+        age_inp = st.selectbox('Select Minimum Age', [""] + valid_age)
+        if age_inp != "":
+            final_df = filter_column(final_df, "Minimum Age Limit", age_inp)
+
+    with right_column_2:
+        valid_payments = ["Free", "Paid"]
+        pay_inp = st.selectbox('Select Free or Paid', [""] + valid_payments)
+        if pay_inp != "":
+            final_df = filter_column(final_df, "Fees", pay_inp)
 
     table = deepcopy(final_df)
     table.reset_index(inplace=True, drop=True)

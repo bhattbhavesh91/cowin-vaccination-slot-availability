@@ -12,17 +12,11 @@
 # port = $PORT\n\
 # " > ~/.streamlit/config.toml
 
-# Setup.sh
 mkdir -p ~/.streamlit/
-
-echo "\
-[general]\n\
-email = \"bhattbhavesh91@gmail.com\"\n\
-" >~/.streamlit/credentials.toml
-
 echo "\
 [server]\n\
 headless = true\n\
-enableCORS=false\n\
 port = $PORT\n\
-" >~/.streamlit/config.toml
+enableCORS = false\n\
+\n\
+" > ~/.streamlit/config.toml

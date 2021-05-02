@@ -75,8 +75,8 @@ for INP_DATE in date_str:
                 final_df = deepcopy(df)
         else:
             st.error("No rows in the data Extracted from the API")
-    else:
-        st.error("Invalid response")
+#     else:
+#         st.error("Invalid response")
 
 if len(final_df):
     final_df.drop_duplicates(inplace=True)

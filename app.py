@@ -36,6 +36,7 @@ rename_mapping = {
     }
 
 st.title('CoWIN Vaccination Slot Availability')
+st.info('The CoWIN APIs are geo-fenced so sometimes you may not see an output! Please try after sometime ')
 
 # numdays = st.sidebar.slider('Select Date Range', 0, 100, 10)
 unique_districts = list(mapping_df["district name"].unique())
@@ -60,19 +61,20 @@ for INP_DATE in date_str:
     response = requests.get(URL)
     if (response.ok) and ('centers' in json.loads(response.text)):
         resp_json = json.loads(response.text)['centers']
-        df = pd.DataFrame(resp_json)
-        if len(df):
-            df = df.explode("sessions")
-            df['min_age_limit'] = df.sessions.apply(lambda x: x['min_age_limit'])
-            df['available_capacity'] = df.sessions.apply(lambda x: x['available_capacity'])
-            df['date'] = df.sessions.apply(lambda x: x['date'])
-            df = df[["date", "available_capacity", "min_age_limit", "pincode", "name", "state_name", "district_name", "block_name", "fee_type"]]
-            if final_df is not None:
-                final_df = pd.concat([final_df, df])
+        if resp_json is not None:
+            df = pd.DataFrame(resp_json)
+            if len(df):
+                df = df.explode("sessions")
+                df['min_age_limit'] = df.sessions.apply(lambda x: x['min_age_limit'])
+                df['available_capacity'] = df.sessions.apply(lambda x: x['available_capacity'])
+                df['date'] = df.sessions.apply(lambda x: x['date'])
+                df = df[["date", "available_capacity", "min_age_limit", "pincode", "name", "state_name", "district_name", "block_name", "fee_type"]]
+                if final_df is not None:
+                    final_df = pd.concat([final_df, df])
+                else:
+                    final_df = deepcopy(df)
             else:
-                final_df = deepcopy(df)
-        else:
-            st.error("No rows in the data Extracted from the API")
+                st.error("No rows in the data Extracted from the API")
 #     else:
 #         st.error("Invalid response")
 

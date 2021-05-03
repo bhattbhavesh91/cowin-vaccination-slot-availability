@@ -1,8 +1,11 @@
 district name,district id
+Abiramapuram,018
+Adayar,020
 Adilabad,582
 Agar,320
 Agatti Island,796
 Agra,622
+Agaram,082
 Ahmedabad,154
 Ahmedabad Corporation,770
 Ahmednagar,391
@@ -19,6 +22,7 @@ Alwar,512
 Ambala,193
 Ambedkar Nagar,625
 Amethi,626
+Aminjikarai,029
 Amravati,366
 Amreli,174
 Amritsar,485
@@ -28,17 +32,23 @@ Anantapur,9
 Anantnag,224
 Angul,445
 Anjaw,22
+Anna Nagar East,102
+Anna Nagar Chennai,040
+Anna Nagar West, 101
+Anna Road, 002
 Anuppur,334
 Aranthangi,779
 Araria,74
 Aravalli,158
 Ariyalur,555
+Arumbakkam,106
 Arwal,78
 Ashoknagar,354
 Attur,578
 Auraiya,628
 Aurangabad,77
 Aurangabad ,397
+Aynavaram,023
 Ayodhya,646
 Azamgarh,629
 BBMP,294
@@ -82,6 +92,7 @@ Begusarai,98
 Belgaum,264
 Bellary,274
 Bemetara,114
+Besantnagar,090
 Betul,362
 Bhadohi,687
 Bhadradri Kothagudem,583
@@ -111,6 +122,7 @@ Bokaro,242
 Bongaigaon,57
 Botad,176
 Boudh,468
+Broadway,108
 Budgam,229
 Bulandshahr,640
 Buldhana,367
@@ -119,10 +131,14 @@ Burhanpur,342
 Buxar,100
 COOCHBEHAR,783
 Cachar,66
+Cemetry Road,021
 Central Delhi,141
+Central Institute of technolog,113
+Central Leather research insti,020
 Chamarajanagar,271
 Chamba,791
 Chamba,214
+Chamiers Road,018
 Chamoli,699
 Champawat,708
 Champhai,429
@@ -135,7 +151,13 @@ Charaideo,766
 Charkhi Dadri,201
 Chatra,245
 Chengalpet,565
-Chennai,571
+Chennai,001
+Chennai Race course,032
+Chepauk,005
+Chetput,031
+Chintadripet,002
+Choolai,112
+Choolaimedu,094
 Cheyyar,778
 Chhatarpur,328
 Chhindwara,337
@@ -173,6 +195,10 @@ Deoghar,253
 Deoria,643
 Devbhumi Dwaraka,168
 Dewas,324
+D G vaishnav college,106
+Decosters Road,012
+Defence Officer's colony,032
+Directorate Of tech education,025 
 Dhalai,614
 Dhamtari,118
 Dhanbad,257
@@ -185,6 +211,7 @@ Dholpur,524
 Dhubri,59
 Dhule,388
 Diamond Harbor HD (S 24 Parganas),718
+Dr. ambedkar nagar,003
 Dibang Valley,25
 Dibrugarh,43
 Dima Hasao,67
@@ -207,6 +234,10 @@ East Khasi Hills,414
 East Siang,42
 East Sikkim,535
 East Singhbhum,247
+Egmore,008
+Ekkaduthangal,032
+Eldams Road,018
+Erukkancheri,118
 Ernakulam,307
 Erode,563
 Etah,644
@@ -220,6 +251,7 @@ Fatehpur,648
 Fazilka,487
 Ferozpur,480
 Firozabad,649
+Flowers Road,084
 Gadag,280
 Gadchiroli,379
 Gajapati,467

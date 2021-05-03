@@ -58,7 +58,7 @@ final_df = None
 for INP_DATE in date_str:
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(DIST_ID, INP_DATE)
     response = requests.get(URL)
-    if response.ok:
+    if (response.ok) and ('centers' in json.loads(response.text)):
         resp_json = json.loads(response.text)['centers']
         df = pd.DataFrame(resp_json)
         if len(df):

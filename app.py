@@ -78,7 +78,7 @@ for INP_DATE in date_str:
 #     else:
 #         st.error("Invalid response")
 
-if (len(final_df)) and (final_df is not None):
+if (final_df is not None) and (len(final_df)):
     final_df.drop_duplicates(inplace=True)
     final_df.rename(columns=rename_mapping, inplace=True)
 
@@ -105,6 +105,6 @@ if (len(final_df)) and (final_df is not None):
     table.reset_index(inplace=True, drop=True)
     st.table(table)
 else:
-    st.error("No Data Found")
+    st.error("Unable to fetch data currently, please try after sometime")
 
 st.markdown("_- Bhavesh Bhatt_")

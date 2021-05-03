@@ -78,7 +78,7 @@ for INP_DATE in date_str:
 #     else:
 #         st.error("Invalid response")
 
-if len(final_df):
+if (len(final_df)) and (final_df is not None):
     final_df.drop_duplicates(inplace=True)
     final_df.rename(columns=rename_mapping, inplace=True)
 

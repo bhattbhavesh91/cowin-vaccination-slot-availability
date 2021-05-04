@@ -31,6 +31,7 @@ rename_mapping = {
     'date': 'Date',
     'min_age_limit': 'Minimum Age Limit',
     'available_capacity': 'Available Capacity',
+    'vaccine': 'Vaccine',
     'pincode': 'Pincode',
     'name': 'Hospital Name',
     'state_name' : 'State',
@@ -70,9 +71,10 @@ for INP_DATE in date_str:
             if len(df):
                 df = df.explode("sessions")
                 df['min_age_limit'] = df.sessions.apply(lambda x: x['min_age_limit'])
+                df['vaccine'] = df.sessions.apply(lambda x: x['vaccine'])
                 df['available_capacity'] = df.sessions.apply(lambda x: x['available_capacity'])
                 df['date'] = df.sessions.apply(lambda x: x['date'])
-                df = df[["date", "available_capacity", "min_age_limit", "pincode", "name", "state_name", "district_name", "block_name", "fee_type"]]
+                df = df[["date", "available_capacity", "vaccine", "min_age_limit", "pincode", "name", "state_name", "district_name", "block_name", "fee_type"]]
                 if final_df is not None:
                     final_df = pd.concat([final_df, df])
                 else:

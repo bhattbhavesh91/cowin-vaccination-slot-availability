@@ -17,6 +17,10 @@ def filter_column(df, col, value):
     df_temp = deepcopy(df.loc[df[col] == value, :])
     return df_temp
 
+def filter_capacity(df, col, value):
+    df_temp = deepcopy(df.loc[df[col] > value, :])
+    return df_temp
+
 
 mapping_df = load_mapping()
 

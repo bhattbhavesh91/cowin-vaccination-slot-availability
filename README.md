@@ -6,6 +6,8 @@ Script to check the available slots for Covid-19 Vaccination Centers from CoWIN 
 [Link to the Website](https://cowin-vaccination-appointment.herokuapp.com/)
 -->
 
+The Indian Government has closed the API, the application isn't running anymore!
+
 [Link to the article](https://analyticsindiamag.com/data-scientist-creates-python-script-to-track-available-slots-for-covid-vaccinations/)
 
 ![](https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability/blob/main/demo/demo_1.gif)

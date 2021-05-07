@@ -6,6 +6,9 @@ import pandas as pd
 import streamlit as st
 from copy import deepcopy
 
+# faking chrome browser
+browser_header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
@@ -63,7 +66,7 @@ date_str = [x.strftime("%d-%m-%Y") for x in date_list]
 final_df = None
 for INP_DATE in date_str:
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(DIST_ID, INP_DATE)
-    response = requests.get(URL)
+    response = requests.get(URL, headers=browser_header)
     if (response.ok) and ('centers' in json.loads(response.text)):
         resp_json = json.loads(response.text)['centers']
         if resp_json is not None:

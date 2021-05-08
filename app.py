@@ -118,7 +118,7 @@ if (final_df is not None) and (len(final_df)):
 
     table = deepcopy(final_df)
     table.reset_index(inplace=True, drop=True)
-    st.table(table)
+    st.dataframe(table)
 else:
     st.error("Unable to fetch data currently, please try after sometime")
 

@@ -111,7 +111,7 @@ if (final_df is not None) and (len(final_df)):
             final_df = filter_column(final_df, "Fees", pay_inp)
 
     with right_column_2a:
-        valid_capacity = ["available"]
+        valid_capacity = ["Available"]
         cap_inp = st.selectbox('Select Availablilty', [""] + valid_capacity)
         if cap_inp != "":
             final_df = filter_capacity(final_df, "Available Capacity", 0)

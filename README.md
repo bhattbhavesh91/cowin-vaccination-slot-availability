@@ -1,6 +1,6 @@
 # CoWIN vaccination slot availability using Python
 
-Script to check the available slots for Covid-19 Vaccination Centers from CoWIN API in India
+Script to check the available slots for Covid-19 Vaccination Centers from CoWIN API in India. This CANNOT book slots automatically.
 
 <!---
 [Link to the Website](https://cowin-vaccination-appointment.herokuapp.com/)

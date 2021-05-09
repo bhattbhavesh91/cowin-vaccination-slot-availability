@@ -12,7 +12,7 @@ Python is a programming language that is powerful but easy to learn. It is free,
 The Anaconda Python distribution is an easily-installable bundle of Python and many of the libraries used throughout this class. Unless you have a good reason not to, we recommend that you use Anaconda.
 
 ### Mac/Linux users
-1. Download the [appropriate version](http://continuum.io/downloads) of Anaconda
+1. Download the [appropriate version](https://www.anaconda.com/products/individual) of Anaconda
 1. Follow the instructions on that page to run the installer
 1. Test it out: open a terminal window, and type ``python``, you should see something like
 ```
@@ -25,7 +25,7 @@ If `Anaconda` doesn't appear on the first line, you are using a different versio
 1. Update IPython to the newest version by typing `conda update ipython` at the command line
 
 ### Windows Users
-1. Download the [appropriate version](http://continuum.io/downloads) of Anaconda
+1. Download the [appropriate version](https://www.anaconda.com/products/individual) of Anaconda
 1. Follow the instructions on that page to run the installer. This will create a directory at `C:\Anaconda`
 1. Test it out: start the Anaconda launcher, which you can find in `C:\Anaconda` or, in the Start menu. Start the IPython notebook. A new browser window should open. 
 1. Click `New Notebook`, which should open a new page.

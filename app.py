@@ -82,8 +82,8 @@ for INP_DATE in date_str:
                     final_df = pd.concat([final_df, df])
                 else:
                     final_df = deepcopy(df)
-            else:
-                st.error("No rows in the data Extracted from the API")
+        else:
+            st.error("No rows in the data Extracted from the API")
 #     else:
 #         st.error("Invalid response")
 
@@ -91,7 +91,7 @@ if (final_df is not None) and (len(final_df)):
     final_df.drop_duplicates(inplace=True)
     final_df.rename(columns=rename_mapping, inplace=True)
 
-    left_column_2, center_column_2, right_column_2, right_column_2a = st.beta_columns(4)
+    left_column_2, center_column_2, right_column_2, right_column_2a,  right_column_2b = st.beta_columns(5)
     with left_column_2:
         valid_pincodes = list(np.unique(final_df["Pincode"].values))
         pincode_inp = st.selectbox('Select Pincode', [""] + valid_pincodes)
@@ -115,6 +115,12 @@ if (final_df is not None) and (len(final_df)):
         cap_inp = st.selectbox('Select Availablilty', [""] + valid_capacity)
         if cap_inp != "":
             final_df = filter_capacity(final_df, "Available Capacity", 0)
+
+    with right_column_2b:
+        valid_vaccines = ["COVISHIELD", "COVAXIN"]
+        vaccine_inp = st.selectbox('Select Vaccine', [""] + valid_vaccines)
+        if vaccine_inp != "":
+            final_df = filter_column(final_df, "Vaccine", vaccine_inp)
 
     table = deepcopy(final_df)
     table.reset_index(inplace=True, drop=True)
@@ -149,5 +155,5 @@ text-align: center;
 <p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/bhattbhavesh91" target="_blank">Bhavesh Bhatt</a></p>
 </div>
 """
-st.markdown(footer, unsafe_allow_html=True)
+st.markdown(footer,unsafe_allow_html=True)
 # st.markdown("_- Bhavesh Bhatt_")

@@ -2,7 +2,11 @@
 
 Script to check the available slots for Covid-19 Vaccination Centers from CoWIN API in India. This CANNOT book slots automatically. The Indian Government had blocked the API for crawlers, but we are good to go.
 
+<!---
 [Click to view the Website](https://bit.ly/3ob9l94)
+-->
+
+The [CoWin API](https://apisetu.gov.in/public/marketplace/api/cowin) currently states : "Further, these APIs are subject to a rate limit of 100 API calls per 5 minutes per IP".
 &nbsp;
 # Update
 I am humbled to see the overwhelming response that this project has received so far. Feel free to create amazing applications on top of this project. Due to my schedule, I won't be able to allot more time to this project. So there won't be any additional commits to this project.

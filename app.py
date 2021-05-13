@@ -10,7 +10,10 @@ from fake_useragent import UserAgent
 # browser_header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
 # browser_header = {'User-Agent': 'Mozilla/5.0 (Linux; Android 10; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36'}
 
-st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
+st.set_page_config(layout='wide',
+                   initial_sidebar_state='collapsed',
+                   page_icon="https://www.cowin.gov.in/favicon.ico",
+                   page_title="CoWIN Vaccination Slot Availability")
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def load_mapping():

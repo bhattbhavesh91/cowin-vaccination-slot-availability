@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 from copy import deepcopy
 from fake_useragent import UserAgent
+from footer_utils import image, link, layout, footer
 
 # browser_header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
 # browser_header = {'User-Agent': 'Mozilla/5.0 (Linux; Android 10; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36'}
@@ -28,6 +29,9 @@ def filter_capacity(df, col, value):
     df_temp = deepcopy(df.loc[df[col] > value, :])
     return df_temp
 
+@st.cache(allow_output_mutation=True)
+def Pageviews():
+    return []
 
 mapping_df = load_mapping()
 
@@ -135,32 +139,37 @@ if (final_df is not None) and (len(final_df)):
 else:
     st.error("Unable to fetch data currently, please try after sometime")
 
-footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
+# footer="""<style>
+# a:link , a:visited{
+# color: blue;
+# background-color: transparent;
+# text-decoration: underline;
+# }
 
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
+# a:hover,  a:active {
+# color: red;
+# background-color: transparent;
+# text-decoration: underline;
+# }
 
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: white;
-color: black;
-text-align: center;
-}
-</style>
-<div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/bhattbhavesh91" target="_blank">Bhavesh Bhatt</a></p>
-</div>
-"""
-st.markdown(footer,unsafe_allow_html=True)
+# .footer {
+# position: fixed;
+# left: 0;
+# bottom: 0;
+# width: 100%;
+# background-color: white;
+# color: black;
+# text-align: center;
+# }
+# </style>
+# <div class="footer">
+# <p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/bhattbhavesh91" target="_blank">Bhavesh Bhatt</a></p>
+# </div>
+# """
+# st.markdown(footer,unsafe_allow_html=True)
 # st.markdown("_- Bhavesh Bhatt_")
+
+pageviews=Pageviews()
+pageviews.append('dummy')
+pg_views = len(pageviews)
+footer(pg_views)

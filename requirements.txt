@@ -2,3 +2,4 @@ streamlit
 numpy
 pandas
 requests
+fake-useragent

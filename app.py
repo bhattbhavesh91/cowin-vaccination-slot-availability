@@ -35,9 +35,6 @@ def Pageviews():
 
 mapping_df = load_mapping()
 
-mapping_dict = pd.Series(mapping_df["district id"].values,
-                         index = mapping_df["district name"].values).to_dict()
-
 rename_mapping = {
     'date': 'Date',
     'min_age_limit': 'Minimum Age Limit',
@@ -54,14 +51,24 @@ rename_mapping = {
 st.title('CoWIN Vaccination Slot Availability')
 st.info('The CoWIN APIs are geo-fenced so sometimes you may not see an output! Please try after sometime ')
 
+valid_states = list(np.unique(mapping_df["state_name"].values))
+
+left_column_1, center_column_1, right_column_1 = st.beta_columns(3)
+with left_column_1:
+    numdays = st.slider('Select Date Range', 0, 100, 3)
+
+with center_column_1:
+    state_inp = st.selectbox('Select State', [""] + valid_states)
+    if state_inp != "":
+        mapping_df = filter_column(mapping_df, "state_name", state_inp)
+
+
+mapping_dict = pd.Series(mapping_df["district id"].values,
+                         index = mapping_df["district name"].values).to_dict()
+
 # numdays = st.sidebar.slider('Select Date Range', 0, 100, 10)
 unique_districts = list(mapping_df["district name"].unique())
 unique_districts.sort()
-
-left_column_1, right_column_1 = st.beta_columns(2)
-with left_column_1:
-    numdays = st.slider('Select Date Range', 0, 100, 5)
-
 with right_column_1:
     dist_inp = st.selectbox('Select District', unique_districts)
 

@@ -3,3 +3,4 @@ numpy
 pandas
 requests
 fake-useragent
+htbuilder

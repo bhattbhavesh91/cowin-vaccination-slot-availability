@@ -5,9 +5,10 @@ import requests
 import pandas as pd
 import streamlit as st
 from copy import deepcopy
+from fake_useragent import UserAgent
 
-# faking chrome browser
-browser_header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+# browser_header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+# browser_header = {'User-Agent': 'Mozilla/5.0 (Linux; Android 10; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36'}
 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 
@@ -62,6 +63,9 @@ DIST_ID = mapping_dict[dist_inp]
 base = datetime.datetime.today()
 date_list = [base + datetime.timedelta(days=x) for x in range(numdays)]
 date_str = [x.strftime("%d-%m-%Y") for x in date_list]
+
+temp_user_agent = UserAgent()
+browser_header = {'User-Agent': user_agent.random}
 
 final_df = None
 for INP_DATE in date_str:

@@ -19,30 +19,30 @@ The Anaconda Python distribution is an easily-installable bundle of Python and m
 
 ### Mac/Linux users
 1. Download the [appropriate version](https://www.anaconda.com/products/individual) of Anaconda
-1. Follow the instructions on that page to run the installer
-1. Test it out: open a terminal window, and type ``python``, you should see something like
+2. Follow the instructions on that page to run the installer
+3. Test it out: open a terminal window, and type ``python``, you should see something like
 ```
 Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
 ```
 If `Anaconda` doesn't appear on the first line, you are using a different version of Python. See the troubleshooting section below.
 
 1. Test out the IPython notebook: open a Terminal window, and type `ipython notebook`. A new browser window should pop up. 
-1. Click `New Notebook` to create a new notebook file
-1. Update IPython to the newest version by typing `conda update ipython` at the command line
+2. Click `New Notebook` to create a new notebook file
+3. Update IPython to the newest version by typing `conda update ipython` at the command line
 
 ### Windows Users
 1. Download the [appropriate version](https://www.anaconda.com/products/individual) of Anaconda
-1. Follow the instructions on that page to run the installer. This will create a directory at `C:\Anaconda`
-1. Test it out: start the Anaconda launcher, which you can find in `C:\Anaconda` or, in the Start menu. Start the IPython notebook. A new browser window should open. 
-1. Click `New Notebook`, which should open a new page.
-1. Update IPython to the newest version by opening a command prompt, and typing `conda update ipython`
+2. Follow the instructions on that page to run the installer.
+3. Go to Start and Run Jupyter Notebook.
+4. Click `New Notebook`, which should open a new page.
 
 # Usage
-- Clone the repository.
+- Clone the repository. using `! Git Clone https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability.git `
 - The tool only works with Indian IP addresses so disconnect your VPN if needed.
-- Enter the command - `cd cowin-vaccination-slot-availability-main/`
-- Install all the dependencies - `pip3 install -r requirements.txt`
-- Run the python application - `streamlit run app.py`
+- Enter the command - `cd cowin-vaccination-slot-availability/`
+- Install all the dependencies - `! pip3 install -r requirements.txt`
+- Run the python application - `! streamlit run app.py`
+- This will take a lot of time when runnning for first time.
 &nbsp;
 # Demo
 ![](https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability/blob/main/demo/demo_1.gif)

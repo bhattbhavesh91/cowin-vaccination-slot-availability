@@ -43,7 +43,7 @@ If `Anaconda` doesn't appear on the first line, you are using a different versio
 - Install all the dependencies - `! pip3 install -r requirements.txt`
 - Run the python application - `! streamlit run app.py`
 - This will take more then 30 min to run when running for the first time.
-nbsp;
+- nbsp;
 # Demo
 ![](https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability/blob/main/demo/demo_1.gif)
 # Articles

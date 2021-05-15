@@ -41,8 +41,14 @@ If `Anaconda` doesn't appear on the first line, you are using a different versio
 - The tool only works with Indian IP addresses so disconnect your VPN if needed.
 - Enter the command - `cd cowin-vaccination-slot-availability/`
 - Install all the dependencies - `! pip3 install -r requirements.txt`
-- Run the python application - `! streamlit run app.py`
-- This will take more then 30 min to run when running for the first time.
+- Run Anaconda Promt (Run as Administrator) From Start Menu.
+- Go to your Directory Eg `cd C:\Users\lenovo\Desktop\Jupyter Notebooks\2021\Cowin\cowin-vaccination-slot-availability`
+- Run `streamlit run app.py`
+- - nbsp;
+-   You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.7:8501
 - nbsp;
 # Demo
 ![](https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability/blob/main/demo/demo_1.gif)

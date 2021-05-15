@@ -42,8 +42,8 @@ If `Anaconda` doesn't appear on the first line, you are using a different versio
 - Enter the command - `cd cowin-vaccination-slot-availability/`
 - Install all the dependencies - `! pip3 install -r requirements.txt`
 - Run the python application - `! streamlit run app.py`
-- This will take a lot of time when runnning for first time.
-&nbsp;
+- This will take more then 30 min to run when running for the first time.
+nbsp;
 # Demo
 ![](https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability/blob/main/demo/demo_1.gif)
 # Articles

@@ -74,6 +74,8 @@ or click on the image below
 
 [![Python Script to Track Available Slots For Covid-19 Vaccinations in India](http://img.youtube.com/vi/tZ2xA19ZALA/0.jpg)](http://www.youtube.com/watch?v=tZ2xA19ZALA)
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbhattbhavesh91%2Fcowin-vaccination-slot-availability&count_bg=%233D8CC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Repository+Visits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 ### Want to know more about me?
 ## Follow Me
 <a href="https://twitter.com/_bhaveshbhatt" target="_blank"><img class="ai-subscribed-social-icon" src="https://bhattbhavesh91.github.io/assets/images/tw.png" width="30"></a>

@@ -135,7 +135,7 @@ if (final_df is not None) and (len(final_df)):
             final_df = filter_capacity(final_df, "Available Capacity", 0)
 
     with right_column_2b:
-        valid_vaccines = ["COVISHIELD", "COVAXIN"]
+        valid_vaccines = ["COVISHIELD", "COVAXIN","SPUTNIK V"]
         vaccine_inp = st.selectbox('Select Vaccine', [""] + valid_vaccines)
         if vaccine_inp != "":
             final_df = filter_column(final_df, "Vaccine", vaccine_inp)

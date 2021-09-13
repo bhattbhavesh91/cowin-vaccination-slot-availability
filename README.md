@@ -46,7 +46,7 @@ If `Anaconda` doesn't appear on the first line, you are using a different versio
 4. Click `New Notebook`, which should open a new page.
 
 # Usage
-- Clone the repository. using `! Git Clone https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability.git `
+- Clone the repository. using ` git clone https://github.com/bhattbhavesh91/cowin-vaccination-slot-availability.git `
 - The tool only works with Indian IP addresses so disconnect your VPN if needed.
 - Enter the command - `cd cowin-vaccination-slot-availability/`
 - Install all the dependencies - `! pip3 install -r requirements.txt`
